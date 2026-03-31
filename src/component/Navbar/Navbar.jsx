@@ -5,9 +5,9 @@ const Navbar = () => {
   const [menuShow, setMenuShow] = useState(false);
 
   return (
-    <div className="border-b border-gray-300 pb-4">
-      <div className="container mx-auto bg-transparent sticky top-0 z-10 backdrop-blur-2xl  flex justify-between px-3  items-center gap-10">
-        {/* name */}
+    <div className="border-b border-gray-300 py-4 sticky top-0 z-10  backdrop-blur-2xl  ">
+      <div className="container mx-auto bg-transparent flex justify-between px-3  items-center gap-10">
+        {/* name */}  
         <div>
           <h1 className="font-extrabold text-3xl bg-linear-to-l from-[#3B82F6] to-[#8B5CF6] bg-clip-text text-transparent">
             DigiTools

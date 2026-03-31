@@ -4,7 +4,7 @@ import BannerImg from '../../assets/banner.png'
 const Right = () => {
   return (
     <div>
-      <img src={BannerImg} alt="Banner" />
+      <img className='rounded-2xl' src={BannerImg} alt="Banner" />
     </div>
   )
 }

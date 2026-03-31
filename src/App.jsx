@@ -1,12 +1,15 @@
 import React from 'react'
 import Navbar from './component/Navbar/Navbar'
 import Banner from './component/Banner/Banner'
+import Info from './component/Info/Info'
+
 
 const App = () => {
   return (
-    <div className='py-7'>
+    <div >
       <Navbar />
       <Banner />
+      <Info/>
     </div>
   )
 }
