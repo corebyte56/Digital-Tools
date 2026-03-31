@@ -5,7 +5,7 @@ const Navbar = () => {
   const [menuShow, setMenuShow] = useState(false);
 
   return (
-    <div className="border-b border-gray-300 py-4 sticky top-0 z-10  backdrop-blur-2xl  ">
+    <div className="border-b border-gray-300 py-4 px-7 sticky top-0 z-50 backdrop-blur-sm bg-white/30">
       <div className="container mx-auto bg-transparent flex justify-between px-3  items-center gap-10">
         {/* name */}  
         <div>
