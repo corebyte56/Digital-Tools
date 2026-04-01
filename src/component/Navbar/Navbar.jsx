@@ -44,6 +44,7 @@ const Navbar = () => {
           <button
             className="text-white font-semibold bg-linear-to-l from-[#3B82F6] to-[#8B5CF6] border border-[#3B82F6] py-2 px-3 rounded-3xl cursor-pointer 
           hover:bg-linear-to-l hover:from-[#3B82F6] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent hover:scale-105 duration-200
+          active:scale-95 active:translate-y-0
           "
           >
             Get Started
@@ -96,6 +97,7 @@ const Navbar = () => {
                 <button
                   className="text-white font-semibold bg-linear-to-l from-[#3B82F6] to-[#8B5CF6] border border-[#3B82F6] py-2 px-3 rounded-3xl cursor-pointer 
           hover:bg-linear-to-l hover:from-[#3B82F6] hover:to-[#8B5CF6] hover:bg-clip-text hover:text-transparent hover:scale-105 duration-200
+          active:scale-95 active:translate-y-0
           "
                 >
                   Get Started

@@ -25,6 +25,7 @@ const Left = () => {
         <button
           className="text-white text-[10px] md:text-[16px] font-extrabold md:font-semibold bg-linear-to-l from-[#9514FA] to-[#4F39F6] border border-[#3B82F6] py-3 px-4 rounded-3xl cursor-pointer drop-shadow-xl
           hover:bg-linear-to-l hover:from-[#9514FA] hover:to-[#4F39F6] hover:bg-clip-text hover:text-transparent hover:scale-105 hover:-translate-y-1 duration-200
+          active:scale-95 active:translate-y-0
           "
         >
           Explore Products
@@ -35,6 +36,7 @@ const Left = () => {
           bg-linear-to-l from-[#9514FA] to-[#4F39F6] bg-clip-text text-transparent
           hover:bg-linear-to-l hover:from-[#9514FA] hover:to-[#4F39F6] hover:bg-clip-padding hover:text-white border border-[#3B82F6]
           hover:scale-105 hover:-translate-y-1 duration-200 flex items-center gap-2  
+          active:scale-95 active:translate-y-0
           "
         >
           <Play className="text-[10px] md:text-[16px] font-extrabold md:font-semibold text-[#4F39F6] hover:text-white"/> Watch Demo

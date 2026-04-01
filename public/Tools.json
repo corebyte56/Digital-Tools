@@ -1,7 +1,7 @@
-{
-  "data": [
+[
     {
       "id": 1,
+      "image": "writing_2327400 1.png",
       "title": "AI Writing Pro",
       "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
       "price": "$29",
@@ -55,4 +55,3 @@
       "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"]
     }
   ]
-}
