@@ -1,8 +1,10 @@
+import { CornerUpLeftIcon, MoveRight } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 
 const ToolsCards = () => {
 
   const [showdata, setShowdata] = useState([])
+  const [showBadges, setShowBadges] = useState("")
 
   const handleShowData = async () => {
     const res = await fetch("./Tools.json")
@@ -19,23 +21,33 @@ const ToolsCards = () => {
 
       {showdata.map((tool) => (
 
-        <div key={tool.id} className='relative space-y-6 flex flex-col items-start border border-gray-200 p-6 rounded-2xl'>
+        <div key={tool.id} className='relative space-y-6 flex flex-col text-start items-start border border-gray-200 p-6 rounded-2xl'>
 
-          <img src={tool.image} alt={tool.title} className='w-16 h-16' />
+          <img src={tool.image}  className='w-16 h-16' />
+
           <h3 className='text-2xl font-bold'>{tool.title}</h3>
 
           <p className='text-[#627382]'>{tool.description}</p>
 
-          <div className='flex  items-start'>
-            <h3 className='text-2xl font-bold'>${tool.price}</h3>
+          <div className='flex items-start'>
+            <h3 className='text-2xl font-bold'>{tool.price}</h3>
             <p className='text-[#627382]'>{tool.billing}</p>
           </div>
 
-          <p className='absolute top-3 right-7 ' >{tool.badge}</p>
+          <p 
+          // onScroll={()=> setShowBadges()}
+          className={`absolute top-3 right-7 
+            
+            ${showBadges === "Best Seller" ? "p-5 bg-red-600" : "py-2 px-3 rounded-full font-medium bg-green-200"}
+            `} >
+              
+            {tool.badge}
+            
+            </p>
           <ul>
             {tool.features.map((feature, index) => (
               <li key={index} className='text-[#627382] flex items-center gap-2'>
-                {feature}
+                <MoveRight color='green'/> {feature}
               </li>
             ))}
           </ul>
