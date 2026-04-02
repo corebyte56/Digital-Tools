@@ -1,9 +1,8 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import ToolsCards from '../PremiumTools/ToolsCards'
 import Cart from '../Cart/Cart'
 
-const ToggleBtn = ({IsActive, setIsActive, tools}) => {
+const ToggleBtn = ({IsActive, setIsActive }) => {
 
   return (
     <>

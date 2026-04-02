@@ -1,13 +1,14 @@
+import { Check } from 'lucide-react'
 import React from 'react'
 
-const Cards = ({ showdata, tools }) => {
+const Cards = ({ showData }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {showdata.map((tool) => (
+      {showData.map((tool) => (
         <div
           key={tool.id}
-          className="relative space-y-6 flex flex-col text-start items-start border border-gray-200 py-7 px-8 rounded-2xl shadow-xl hover:shadow-xl hover:scale-105 hover:-translate-y-1 duration-200 active:scale-95 active:translate-y-0 cursor-pointer  "
+          className="relative space-y-6 flex flex-col text-start items-start border border-gray-200 py-7 px-8 rounded-2xl shadow-xl hover:shadow-xl hover:scale-105 hover:-translate-y-1 duration-200 cursor-pointer  "
         >
           <img src={tool.image} className="w-16 h-16 border border-gray-300 rounded-full p-2    " />
 
@@ -43,7 +44,7 @@ const Cards = ({ showdata, tools }) => {
                 className="text-[#627382] flex items-center gap-2"
               >
                 {/* Svg */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1dba08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                <Check color='lightgreen'/>
 
                 {/* features */}
                 {feature}
