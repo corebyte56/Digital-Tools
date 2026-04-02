@@ -48,7 +48,7 @@ const PricingCards = () => {
 
       {/* Pricing Card 2 */}
 
-      <div className="relative h-full -top-9 space-y-6 bg-linear-to-l from-[#9514FA] to-[#4F39F6] border border-[#3B82F6] flex flex-col justify-between text-start items-start text-white py-7 px-8 rounded-2xl shadow-2xl hover:shadow-xl hover:scale-105 hover:-translate-y-1 duration-200 active:scale-95 active:translate-y-0">
+      <div className="relative h-full space-y-6 bg-linear-to-l from-[#9514FA] to-[#4F39F6] border border-[#3B82F6] flex flex-col justify-between text-start items-start text-white py-7 px-8 rounded-2xl shadow-2xl hover:shadow-xl hover:scale-105 hover:-translate-y-1 duration-200 active:scale-95 active:translate-y-0">
 
         <p className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FEF3C6] text-[#BB4D00] py-3 px-4 rounded-full text-sm font-medium border ">Most Popular</p>
 
