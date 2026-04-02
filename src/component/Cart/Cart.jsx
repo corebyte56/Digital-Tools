@@ -2,7 +2,7 @@ import React from "react";
 import Empty from "../../assets/empty.png";
 
 const Cart = ({ addedItems, handleRemoveFromCart }) => {
-  
+
   return (
     <div className="flex flex-col gap-5 items-center border border-gray-200 py-10 px-8 rounded-2xl shadow-xl ">
       {addedItems && addedItems.length > 0 ? (
@@ -32,6 +32,7 @@ const Cart = ({ addedItems, handleRemoveFromCart }) => {
               <p className="text-red-500 font-bold hover:text-red-700"
                onClick={() => handleRemoveFromCart(item)}>
                 Remove
+                
               </p>
             </div>
           ))}

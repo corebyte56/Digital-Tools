@@ -35,9 +35,11 @@ const Navbar = () => {
 
         {/*  */}
         <div className="hidden text-sm lg:flex items-center gap-9 list-none text-gray-500 text-[16px] font-bold">
+          
           <a className="hover:text-[#3B82F6]" href="/">
             <ShoppingCart />
           </a>
+          
           <li className="hover:text-[#3B82F6]">
             <a href="/">Login</a>
           </li>

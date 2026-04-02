@@ -7,7 +7,8 @@ import ThreeeSteps from './component/ThreeSteps/ThreeeSteps'
 import Pricing from './component/Pricing/Pricing'
 import CTA from './component/CTA/CTA'
 import Footer from './component/Footer/Footer'
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
       <Pricing />
       <CTA />
      <Footer/>
+     <ToastContainer />
     </div>
   )
 }

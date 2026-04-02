@@ -2,12 +2,14 @@ import React, { Suspense, useEffect, useState } from "react";
 import ToolsHeader from "./ToolsHeader";
 import Cards from "../Cards/Cards";
 import Cart from "../Cart/Cart";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const PremiumTools = () => {
   const [IsActive, setIsActive] = useState("products");
   const [showData, setShowData] = useState([]);
   const [AddToCart, setAddToCart] = useState([]);
-  const [RemoveFromCart, setRemoveFromCart] = useState([]);
 
   // Fetch data from Tools.json
   const handleData = async () => {
@@ -30,16 +32,18 @@ const PremiumTools = () => {
 
     if (!isExist) {
       setAddToCart([...AddToCart, product]);
-      alert("Product added to cart!");
+      toast("Product added to cart!");
     } else {
-      alert("Already in cart!");
+      toast("Already in cart!");
     }
+    
   };
 
   // Remove from cart function
   const handleRemoveFromCart = (product) => {
-    const updatedCart = RemoveFromCart.filter((item) => item.id !== product.id);
-    setRemoveFromCart(updatedCart);
+    const updatedCart = AddToCart.filter((item) => item.id !== product.id);
+    setAddToCart(updatedCart);
+    toast("Product removed")
   };
 
   return (
