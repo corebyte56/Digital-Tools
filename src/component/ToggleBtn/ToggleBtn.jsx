@@ -1,8 +1,12 @@
 import React from 'react'
+import Cards from '../Cards/Cards'
+import ToolsCards from '../PremiumTools/ToolsCards'
+import Cart from '../Cart/Cart'
 
-const ToggleBtn = ({IsActive, setIsActive}) => {
+const ToggleBtn = ({IsActive, setIsActive, tools}) => {
 
   return (
+    <>
     <div className="flex items-center gap-5 border border-[#e2dede] rounded-full p-2 mt-5">
 
 
@@ -29,9 +33,15 @@ const ToggleBtn = ({IsActive, setIsActive}) => {
             : "text-[10px] md:text-[16px] font-extrabold md:font-semibold  py-3 px-4 rounded-3xl cursor-pointer drop-shadow-xl bg-linear-to-l from-[#9514FA] to-[#4F39F6] bg-clip-text text-transparent"
         }`}
       >
-        Cart
+
+        
+        Cart (0)
       </button>
+
+      
       </div>
+      
+      </>
   )
 }
 

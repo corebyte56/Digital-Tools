@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
+import Cart from "../Cart/Cart";
+import ToolsCards from "./ToolsCards";
 
 const ToolsHeader = () => {
     const [IsActive, setIsActive] = useState("products");
@@ -17,6 +19,9 @@ const ToolsHeader = () => {
 
       {/* Buttons */}
       <ToggleBtn IsActive = {IsActive} setIsActive={setIsActive}/>
+
+      {/* Conditional Rendering */}
+      {IsActive === "products" ? <ToolsCards /> : <Cart />}
     </div>
   );
 };

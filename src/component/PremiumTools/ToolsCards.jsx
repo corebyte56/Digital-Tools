@@ -1,5 +1,5 @@
 import { CornerUpLeftIcon, MoveRight } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Cards from "../Cards/Cards";
 
 const ToolsCards = () => {
@@ -15,9 +15,13 @@ const ToolsCards = () => {
     handleShowData();
   }, []);
 
+  const tools = handleShowData();
+
   return (
     
-      <Cards handleShowData={handleShowData} showdata={showdata} />
+      <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+        {showdata.length > 0 ? <Cards showdata={showdata} tools={tools} /> : <p className="text-center text-2xl font-bold">No data found</p>}
+      </Suspense> 
     
   );
 };
