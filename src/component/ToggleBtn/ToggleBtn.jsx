@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const ToggleBtn = ({IsActive, setIsActive, showData }) => {
-console.log(showData);
+const ToggleBtn = ({IsActive, setIsActive, CartCount}) => {
+
 
   return (
     <>
@@ -34,7 +34,7 @@ console.log(showData);
       >
 
         
-        Cart ({showData.length})
+        Cart ({CartCount})
       </button>
 
       

@@ -3,11 +3,9 @@ import ToggleBtn from "../ToggleBtn/ToggleBtn";
 
 
 
-const ToolsHeader = ({showData, IsActive, setIsActive}) => {
-    
-console.log(showData);
+const ToolsHeader = ({showData, IsActive, setIsActive, CartCount}) => {
 
-   
+
   return (
     <div className="flex flex-col gap-4 items-center">
 
@@ -19,7 +17,7 @@ console.log(showData);
       </p>
 
       {/* Buttons */}
-      <ToggleBtn IsActive = {IsActive} setIsActive={setIsActive} showData={showData}/>
+      <ToggleBtn IsActive = {IsActive} setIsActive={setIsActive} showData={showData} CartCount = {CartCount}/>
 
         
     

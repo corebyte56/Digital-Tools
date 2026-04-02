@@ -1,10 +1,12 @@
 import { Check } from 'lucide-react'
 import React from 'react'
 
-const Cards = ({ showData }) => {
+const Cards = ({ showData, handleAddToCart }) => {
+
   if (!showData || showData.length === 0) {
     return <div className="text-center w-full py-10">Loading Products...</div>;
   }
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {showData.map((tool) => (
@@ -59,12 +61,15 @@ const Cards = ({ showData }) => {
           {/* button */}
 
           <button
+          onClick={() => handleAddToCart(tool)}
             className="text-white w-full text-[10px] md:text-[16px] font-extrabold md:font-semibold bg-linear-to-l from-[#9514FA] to-[#4F39F6] border border-[#3B82F6] py-3 px-4 rounded-3xl cursor-pointer drop-shadow-xl
           hover:bg-linear-to-l hover:from-[#9514FA] hover:to-[#4F39F6] hover:bg-clip-text hover:text-transparent hover:scale-105 hover:-translate-y-1 duration-200 active:scale-95 active:translate-y-0
           "
           >
             Buy Now
           </button>
+
+
         </div>
 
       ))}
