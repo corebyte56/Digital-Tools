@@ -6,10 +6,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-const PremiumTools = () => {
+const PremiumTools = ({AddToCart, handleAddToCart, setAddToCart}) => {
   const [IsActive, setIsActive] = useState("products");
   const [showData, setShowData] = useState([]);
-  const [AddToCart, setAddToCart] = useState([]);
+
 
   // Fetch data from Tools.json
   const handleData = async () => {
@@ -26,18 +26,7 @@ const PremiumTools = () => {
     handleData();
   }, []);
 
-  // Add to cart function
-  const handleAddToCart = (product) => {
-    const isExist = AddToCart.find((item) => item.id === product.id);
 
-    if (!isExist) {
-      setAddToCart([...AddToCart, product]);
-      toast("Product added to cart!");
-    } else {
-      toast("Already in cart!");
-    }
-    
-  };
 
   // Remove from cart function
   const handleRemoveFromCart = (product) => {

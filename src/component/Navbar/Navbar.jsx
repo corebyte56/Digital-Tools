@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, ShoppingCart, X } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({cartItem}) => {
   const [menuShow, setMenuShow] = useState(false);
 
   return (
@@ -36,10 +36,12 @@ const Navbar = () => {
         {/*  */}
         <div className="hidden text-sm lg:flex items-center gap-9 list-none text-gray-500 text-[16px] font-bold">
           
-          <a className="hover:text-[#3B82F6]" href="/">
-            <ShoppingCart />
+          <a className="hover:text-[#3B82F6] relative" href="/">
+            <ShoppingCart /> 
+            
+            <p className="absolute -top-2 left-4 px-1  bg-red-400 text-white rounded-full">{cartItem}</p>
           </a>
-          
+
           <li className="hover:text-[#3B82F6]">
             <a href="/">Login</a>
           </li>
@@ -88,7 +90,7 @@ const Navbar = () => {
                 <ul className="flex flex-col items-center gap-3 list-none text-gray-500 text-[16px] font-bold">
                   <li className="hover:text-[#3B82F6]">
                     <a href="/">
-                      <ShoppingCart />
+                      <ShoppingCart /> 
                     </a>
                   </li>
 

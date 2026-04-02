@@ -25,7 +25,7 @@ const Cards = ({ showData, handleAddToCart }) => {
           <p className="text-[#627382]">{tool.description}</p>
 
           <div className="flex items-start">
-            <h3 className="text-2xl font-bold">{tool.price}</h3>
+            <h3 className="text-2xl font-bold">${tool.price}</h3>
             <p className="text-[#627382]">{tool.billing}</p>
           </div>
 
