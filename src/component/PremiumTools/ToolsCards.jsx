@@ -4,7 +4,6 @@ import Cards from "../Cards/Cards";
 
 const ToolsCards = () => {
   const [showdata, setShowdata] = useState([]);
-  const [showBadges, setShowBadges] = useState("");
 
   const handleShowData = async () => {
     const res = await fetch("./Tools.json");
