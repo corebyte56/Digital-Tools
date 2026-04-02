@@ -6,7 +6,7 @@ const Cards = ({ showdata }) => {
       {showdata.map((tool) => (
         <div
           key={tool.id}
-          className="relative space-y-6 flex flex-col text-start items-start border border-gray-200 py-7 px-8 rounded-2xl"
+          className="relative space-y-6 flex flex-col text-start items-start border border-gray-200 py-7 px-8 rounded-2xl shadow-xl hover:shadow-xl hover:scale-105 hover:-translate-y-1 duration-200 active:scale-95 active:translate-y-0 cursor-pointer  "
         >
           <img src={tool.image} className="w-16 h-16 border border-gray-300 rounded-full p-2    " />
 
