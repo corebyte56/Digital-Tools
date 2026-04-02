@@ -1,23 +1,35 @@
 import React, { Suspense, useEffect, useState } from "react";
 import ToolsHeader from './ToolsHeader'
 import Cards from "../Cards/Cards";
+import Cart from "../Cart/Cart";
 
 
 const PremiumTools = () => {
   const [IsActive, setIsActive] = useState("products");
   const [showData, setShowData] = useState([]);
 
-  // Data ekhane fetch hobe jate shobar jonno available thake
+  const handleData = async () => {
+    try {
+      const response = await fetch("/Tools.json"); 
+      const data = await response.json();
+      setShowData(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    
+    
+  };
+
   useEffect(() => {
-    fetch("./Tools.json")
-      .then(res => res.json())
-      .then(data => setShowData(data));
+    handleData();
   }, []);
+
+
 
   return (
     <div className="py-20">
       {/* Header */}
-      <ToolsHeader IsActive={IsActive} setIsActive={setIsActive} />
+      <ToolsHeader IsActive={IsActive} setIsActive={setIsActive} showData={showData} />
 
       {/* Content */}
 

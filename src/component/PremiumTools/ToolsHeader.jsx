@@ -1,11 +1,11 @@
 import React from "react";
 import ToggleBtn from "../ToggleBtn/ToggleBtn";
-import Cart from "../Cart/Cart";
-import Cards from "../Cards/Cards";
+
 
 
 const ToolsHeader = ({showData, IsActive, setIsActive}) => {
     
+console.log(showData);
 
    
   return (
@@ -19,7 +19,7 @@ const ToolsHeader = ({showData, IsActive, setIsActive}) => {
       </p>
 
       {/* Buttons */}
-      <ToggleBtn IsActive = {IsActive} setIsActive={setIsActive}/>
+      <ToggleBtn IsActive = {IsActive} setIsActive={setIsActive} showData={showData}/>
 
         
     

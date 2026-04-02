@@ -2,7 +2,9 @@ import { Check } from 'lucide-react'
 import React from 'react'
 
 const Cards = ({ showData }) => {
-
+  if (!showData || showData.length === 0) {
+    return <div className="text-center w-full py-10">Loading Products...</div>;
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {showData.map((tool) => (
