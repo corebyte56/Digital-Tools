@@ -5,6 +5,7 @@ import Info from './component/Info/Info'
 import PremiumTools from './component/PremiumTools/PremiumTools'
 import ThreeeSteps from './component/ThreeSteps/ThreeeSteps'
 import Pricing from './component/Pricing/Pricing'
+import CTA from './component/CTA/CTA'
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
       <PremiumTools/>
       <ThreeeSteps/>
       <Pricing />
+      <CTA />
     </div>
   )
 }
